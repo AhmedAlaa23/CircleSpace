@@ -1,0 +1,176 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/* index */
+
+#logo{
+	margin-top: 4vh;
+	margin-left: 30vw;
+}
+
+#logo h1{
+	display: inline;
+	font-family: verdana;
+	font-size: 5vw;
+}
+
+#logo span{
+	display: inline-block;
+	margin-left: 1vw;
+	margin-right: 1vw;
+	width: 5vw;
+	height: 5vw;
+	background-color: brown;
+	border: 1px solid brown;
+	border-radius: 5vw;
+}
+
+#mainm{
+	margin: 0 auto;
+}
+
+#mainbtns{
+	width: 90%;
+	margin: 1% auto 0 auto;
+	text-align: center;
+}
+
+.mainbtn{
+	display: block;
+	margin-top: 10px;
+	margin-top: 7vh;
+	padding: 5px;
+	text-decoration: none;
+	font-size: 8vmin;
+	font-weight: bold;
+	color: black;
+	border: 1px solid gray;
+	border-radius: 4px;
+}
+
+#inst{
+	margin-left: 14px;
+	margin-left: 5vw;
+	padding: 1%;
+}
+
+#inst li{
+	font-family: tahoma;
+	font-size: 5vmin;
+	color: black;
+}
+
+#about{
+	margin-left: 14px;
+	margin-left: 5vw;
+	padding: 1%;
+}
+
+#about li{
+	font-family: tahoma;
+	font-size: 5vmin;
+	color: black;
+}
+
+/* game */
+
+#topbar{
+	position: absolute;
+	width: 100%;
+}
+
+#pausebox{
+	display: none;
+	width: 80%;
+	box-sizing: border-box;
+	position: absolute;
+	margin-top: 18vh;
+	margin-left: 10%;
+	padding: 10px;
+	background-color: brown;
+	border: 1px solid black;
+	border-radius: 4px;
+}
+
+#pausehscore{
+	float: left;
+	font-family: verdana;
+	font-size: 4vw;
+}
+
+#pauseyourscore{
+	float: right;
+	margin-bottom: 10px;
+	font-family: verdana;
+	font-size: 4vw;
+}
+
+#pauselist{
+	clear: both;
+	text-align: center;
+}
+
+#pauselist div{
+	width: 90%;
+	margin: 2% auto 0 auto;
+	font-family: tahoma;
+	font-size: 9vmin;
+	padding: 5px;
+	border: 1px solid black;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+#pausemp a{
+	text-decoration: none;
+	color: black;
+}
+
+#talecanv{
+	position: absolute;
+	z-index: -1;
+}
+
+#pause{
+	display: inline-block;
+	margin-top: 5px;
+	margin-left: 1%;
+	padding: 3px;
+	font-family: tahoma;
+	font-size: 3vw;
+	background-color: whitesmoke;
+	border: 1px solid #cccccc;
+	cursor: pointer;
+}
+
+#score{
+	float: right;
+	margin-right: 5%;
+	font-family: verdana;
+	font-size: 5vw;
+}
+
+/*============ options ===========*/
+
+#opt{
+	width: 90%;	
+	margin: 3% auto;
+}
+
+#opt p{
+	text-align: center;
+	font-family: tahoma;
+	font-size: 6vw;
+	padding: 3px;
+	margin-top: 5px;
+	background-color: whitesmoke;
+	border: 1px solid gray;
+	cursor: pointer;
+}
+
+#opt a{
+	text-decoration: none;
+	color: black;
+}
