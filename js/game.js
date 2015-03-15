@@ -43,12 +43,6 @@ var isspecial = 0;
 var musicno = 0;
 var animesup = 0;
 
-/*test
-var times = new Date();
-var tthen = times.getTime();
-var tnow, delta, des = 0;
-*/
-
 function init(){
 	if(window.requestAnimationFrame){
 		animesup = 1;
@@ -150,7 +144,7 @@ function init(){
 			score +=1;
 		}
 		
-		// push circules if the number of squares is less than 10
+		// push circules if the number of circles is less than 10
 		if(cirs.length < 50){
 			// (max - min + 1) + min
 			var xmin = 0;
@@ -314,12 +308,6 @@ function init(){
 		
 		if(musicno != 0){
 			m1.pause();
-			/*if(musicno == 1){
-				m1.pause();
-			}
-			else{
-				m2.pause();
-			}*/
 		}
 		
 		document.getElementById("pausehscore").innerHTML = "High Score: " + localStorage.hscore;
@@ -338,12 +326,6 @@ function init(){
 		
 		if(musicno != 0){
 			m1.pause();
-			/*if(musicno == 1){
-				m1.pause();
-			}
-			else{
-				m2.pause();
-			}*/
 		}
 		
 		document.getElementById("pausehscore").innerHTML = "High Score: " + localStorage.hscore;
@@ -364,12 +346,6 @@ function init(){
 		
 		if(musicno != 0){
 			m1.play();
-			/*if(musicno == 1){
-				m1.play();
-			}
-			else{
-				m2.play();
-			}*/
 		}
 		
 	});
@@ -380,53 +356,8 @@ function init(){
 	});
 	
 	
-	/* music control
-	m1.onended = function() {
-		m2.play();
-		musicno = 2;
-	};
-	
-	m2.onended = function() {
-		m1.play();
-		musicno = 1;
-	};*/
-	
 }
 
 window.addEventListener("load", function(event){
 	init();
 });
-
-
-/*test
-		times = new Date();
-		tnow = times.getTime();
-		delta = (tnow - tthen) / 1000;
-		tthen = tnow;
-		des = cvy * delta;
-		des = Math.round(des);
-
- some old code
-if(mover == 1){
-			if(mcir.x < xpoint){
-				mvx = 0;
-				mover = 0;
-			}
-			else{
-				mvx += ((xpoint+40) - mcir.x) /100;
-			}
-		}
-		else if(movel == 1){
-			if(mcir.x > xpoint){
-				mvx = 0;
-				movel = 0;
-			}
-			else{
-				mvx += ((xpoint-40) - mcir.x) /100;
-			}
-		}
-		else{
-			mvx = 0;
-			mcir.x = xpoint;
-}
-*/
