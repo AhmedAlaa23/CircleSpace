@@ -1,6 +1,6 @@
 # CircleSpace
-A simple HTML5 2d game.
+A simple Colorful HTML5 Canvas 2D game.
 
-<h1><a href="http://ahmedalaa23.github.io/CircleSpace/">Try it :)</a></h1>
+<h1><a href="http://circularbit.com/circlespace/index.html">Try it :)</a></h1>
 
 Music By: <a href="https://soundcloud.com/stevenobrien/piece-for-flute-and-harp">Steven O'Brien</a>

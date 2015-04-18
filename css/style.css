@@ -128,6 +128,13 @@
 	color: black;
 }
 
+#canvcont{
+	width: 500px;
+	margin: 0 auto;
+	border-right: 2px solid black;
+	border-left: 2px solid black;
+}
+
 #talecanv{
 	position: absolute;
 	z-index: -1;

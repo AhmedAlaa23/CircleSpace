@@ -55,14 +55,14 @@ function init(){
 	}
 	
 	var ctx = document.getElementById("canv").getContext("2d");
-	ctx.canvas.width  = window.innerWidth;
+	ctx.canvas.width  = 500//window.innerWidth;
 	ctx.canvas.height  = window.innerHeight;
 	cw = ctx.canvas.width;
 	ch = ctx.canvas.height;
 	
 	// tale canv
 	var talectx = document.getElementById("talecanv").getContext("2d");
-	talectx.canvas.width  = window.innerWidth;
+	talectx.canvas.width  = 500//window.innerWidth;
 	talectx.canvas.height  = window.innerHeight;
 	
 	//get score element
