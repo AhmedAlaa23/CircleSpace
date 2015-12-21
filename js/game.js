@@ -55,20 +55,31 @@ function init(){
 	}
 	
 	var ctx = document.getElementById("canv").getContext("2d");
-	ctx.canvas.width  = 500//window.innerWidth;
+	if(window.innerWidth > 500){
+		ctx.canvas.width = 500;
+	}
+	else{
+		ctx.canvas.width = window.innerWidth;
+	}
 	ctx.canvas.height  = window.innerHeight;
+
+	//font size of score
+	ctx.font = "20px Arial";
+
 	cw = ctx.canvas.width;
 	ch = ctx.canvas.height;
 	
 	// tale canv
 	var talectx = document.getElementById("talecanv").getContext("2d");
-	talectx.canvas.width  = 500//window.innerWidth;
+	if(window.innerWidth > 500){
+		talectx.canvas.width = 500;
+	}
+	else{
+		talectx.canvas.width = window.innerWidth;
+	}
 	talectx.canvas.height  = window.innerHeight;
 	
-	//get score element
-	var showscore = document.getElementById("score");
-	
-	var mcirsize = Math.round(cw/80);
+	var mcirsize = Math.round(cw/65);
 	var mcir = new circle(cw/2, ch-120, mcirsize, "black");
 	
 	var cirs = [];
@@ -144,7 +155,7 @@ function init(){
 			score +=1;
 		}
 		
-		// push circules if the number of circles is less than 10
+		// push circules if the number of circles is less than 50
 		if(cirs.length < 50){
 			// (max - min + 1) + min
 			var xmin = 0;
@@ -152,7 +163,7 @@ function init(){
 			var randx = Math.round((Math.random() * (xmax - xmin + 1)) + xmin );
 			
 			// random size
-			var rands = (Math.round(cw/200))+(Math.floor((Math.random() * (20 - 5 +1) ) +5 ));
+			var rands = (Math.round(cw/200))+(Math.floor((Math.random() * (40 - 5 +1) ) +5 ));
 			
 			// the y position of the last circle
 			var lastciry = Math.round(Math.abs(cirs[cirs.length-1].y));
@@ -190,8 +201,9 @@ function init(){
 		
 		
 		//show score
-		showscore.innerHTML = Math.round(score/2);
-		
+		//showscore.innerHTML = Math.round(score/2);
+		ctx.fillText(Math.round(score/2).toString(),cw-60,30);
+
 		// animate only if it's not paused and not gameover
 		if(p != 1 && gover != 1){
 			if(animesup == 1){
@@ -233,7 +245,7 @@ function init(){
 		mcir.r = mcirsize;
 	}*/
 	
-	// accelerate after 1 min and main circle get bigger after 10 seconds
+	// accelerate after 1 min and main circle get bigger after 60 seconds
 	var acctime = setInterval(acc, 60000);
 	//var mbig = setInterval(bigger, 60000);
 	
@@ -312,7 +324,7 @@ function init(){
 		
 		document.getElementById("pausehscore").innerHTML = "High Score: " + localStorage.hscore;
 		document.getElementById("pauseyourscore").innerHTML = "Your Score: " + Math.round(score/2);
-		document.getElementById("pausebox").style.display = "block";
+		document.getElementById("pauseboxwrapper").style.display = "flex";
 		document.getElementById("resume").style.display = "none";
 	}
 	
@@ -330,7 +342,7 @@ function init(){
 		
 		document.getElementById("pausehscore").innerHTML = "High Score: " + localStorage.hscore;
 		document.getElementById("pauseyourscore").innerHTML = "Your Score: " + Math.round(score/2);
-		document.getElementById("pausebox").style.display = "block";
+		document.getElementById("pauseboxwrapper").style.display = "flex";
 		}
 	});
 	
@@ -338,7 +350,7 @@ function init(){
 	document.getElementById("resume").addEventListener("click", function(){
 		p = 0;
 		
-		document.getElementById("pausebox").style.display = "none";
+		document.getElementById("pauseboxwrapper").style.display = "none";
 		
 		animate();
 		acctime = setInterval(acc, 60000);

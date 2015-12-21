@@ -3,28 +3,33 @@
 	padding: 0;
 }
 
+#wrapper{
+	position: relative;
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
 /* index */
 
 #logo{
-	margin-top: 4vh;
-	margin-left: 30vw;
+    margin-top: 15px;
 }
 
-#logo h1{
-	display: inline;
-	font-family: verdana;
-	font-size: 5vw;
+#logo img{
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 450px;
+	height: auto;
 }
 
-#logo span{
-	display: inline-block;
-	margin-left: 1vw;
-	margin-right: 1vw;
-	width: 5vw;
-	height: 5vw;
-	background-color: brown;
-	border: 1px solid brown;
-	border-radius: 5vw;
+#logo h3{
+    font-family: verdana;
+    font-size: 28px;
+    font-size: 5vmin;
+    text-align: center;
+    color: brown;
 }
 
 #mainm{
@@ -32,7 +37,7 @@
 }
 
 #mainbtns{
-	width: 90%;
+	width: 95%;
 	margin: 1% auto 0 auto;
 	text-align: center;
 }
@@ -51,60 +56,73 @@
 }
 
 #inst{
-	margin-left: 14px;
-	margin-left: 5vw;
+	margin-left: 20px;
 	padding: 1%;
 }
 
 #inst li{
-	font-family: tahoma;
-	font-size: 5vmin;
-	color: black;
+    margin-top: 12px;
+    font-family: sans-serif;
+    font-size: 6vw;
+    color: black;
+}
+
+.instsubli{
+    list-style-type: none;
 }
 
 #about{
-	margin-left: 14px;
-	margin-left: 5vw;
-	padding: 1%;
+    margin-left: 20px;
+    padding: 1%;
 }
 
 #about li{
-	font-family: tahoma;
-	font-size: 5vmin;
-	color: black;
+    margin-top: 12px;
+    font-family: sans-serif;
+    font-size: 6vw;
+    color: black;
+}
+
+#about li a{
+	color: rgb(207, 72, 72);
 }
 
 /* game */
 
-#topbar{
-	position: absolute;
-	width: 100%;
+#pauseboxwrapper{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255,255,255,0);
+    z-index: 100;
 }
 
 #pausebox{
-	display: none;
-	width: 80%;
-	box-sizing: border-box;
-	position: absolute;
-	margin-top: 18vh;
-	margin-left: 10%;
-	padding: 10px;
-	background-color: brown;
-	border: 1px solid black;
-	border-radius: 4px;
+    width: 95%;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: brown;
+    border: 1px solid gray;
+    border-radius: 3px;
 }
 
 #pausehscore{
-	float: left;
-	font-family: verdana;
-	font-size: 4vw;
+    float: left;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 5.5vw;
 }
 
 #pauseyourscore{
-	float: right;
-	margin-bottom: 10px;
-	font-family: verdana;
-	font-size: 4vw;
+    float: right;
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 5.5vw;
 }
 
 #pauselist{
@@ -112,25 +130,25 @@
 	text-align: center;
 }
 
-#pauselist div{
-	width: 90%;
-	margin: 2% auto 0 auto;
-	font-family: tahoma;
-	font-size: 9vmin;
-	padding: 5px;
-	border: 1px solid black;
-	border-radius: 3px;
-	cursor: pointer;
+#pauselist div, #pausemp{
+    width: 90%;
+    margin: 20px auto 0 auto;
+    font-family: tahoma;
+    font-size: 9vmin;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
-#pausemp a{
+#pausemp{
+    display: block;
 	text-decoration: none;
 	color: black;
 }
 
 #canvcont{
-	width: 500px;
-	margin: 0 auto;
+	width: 100%;
 	border-right: 2px solid black;
 	border-left: 2px solid black;
 }
@@ -141,44 +159,93 @@
 }
 
 #pause{
-	display: inline-block;
-	margin-top: 5px;
-	margin-left: 1%;
-	padding: 3px;
-	font-family: tahoma;
-	font-size: 250%;
-	font-size: 3vw;
-	background-color: whitesmoke;
-	border: 1px solid #cccccc;
-	cursor: pointer;
+    position: absolute;
+    width: 8vw;
+    max-width: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+    cursor: pointer;
 }
 
-#score{
-	float: right;
-	margin-right: 5%;
-	font-family: verdana;
-	font-size: 5vw;
+#pause img{
+	width: 100%;
+	height: auto;
 }
 
 /*============ options ===========*/
 
 #opt{
-	width: 90%;	
-	margin: 3% auto;
+    width: 90%;
+    margin: 5% auto 0 auto;
 }
 
 #opt p{
 	text-align: center;
-	font-family: tahoma;
-	font-size: 6vw;
-	padding: 3px;
-	margin-top: 5px;
-	background-color: whitesmoke;
-	border: 1px solid gray;
-	cursor: pointer;
+    font-family: sans-serif;
+    font-size: 8vmin;
+    padding: 3px;
+    margin-top: 5px;
+    background-color: whitesmoke;
+    border: 1px solid gray;
+    cursor: pointer;
 }
 
-#opt a{
-	text-decoration: none;
-	color: black;
+/*================ top bar ================*/
+
+#topbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    border-bottom: 1px solid black;
+    background-color: brown;
+    padding: 10px;
+}
+
+#topbar img{
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+#bartitle{
+    display: inline-block;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 7vmin;
+    color: black;
+}
+
+#topbarside{
+    cursor: pointer;
+    width: 7vmin;
+    max-width: 40px;
+    height: auto;
+}
+
+#topbarsidenone{
+    visibility: hidden;
+    width: 7vmin;
+    max-width: 40px;
+    height: auto;
+}
+
+/*--------------- media queries ------------*/
+
+@media screen and (min-width: 500px) {
+    #logo h3{
+        font-size: 20px;
+    }
+
+    #bartitle{
+        font-size: 30px;
+    }
+
+    #inst li, #about li{
+        font-size: 20px;
+    }
+
+    #pausehscore, #pauseyourscore{
+        font-size: 25px;
+    }
 }
